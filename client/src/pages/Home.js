@@ -11,13 +11,18 @@ function Home() {
     e.preventDefault();
     fetch("/api", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(textBox),
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ message: textBox }),
     });
   }
 
   function getData() {
-    test.current.value = "dadaada";
+    fetch("/api", { method: "GET" })
+      .then((Response) => Response.json())
+      .then((data) => {
+        setTextBox(data.message);
+        test.current.value = data.message;
+      });
   }
 
   return (
