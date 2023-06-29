@@ -2,11 +2,13 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json());
+
 //Gets
 
 //Posts
 app.post("/api", (req, res) => {
-  console.log("a");
+  console.log(req.body);
 });
 
 app.get("/api", (req, res) => {
