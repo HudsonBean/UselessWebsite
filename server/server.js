@@ -13,7 +13,7 @@ app.use(express.json());
 //Variables
 
 //Gets
-app.get("/api/db", (req, res) => {
+app.get("/api/db/users", (req, res) => {
   db.query("select * from users;", (err, rows, fields) => {
     if (err) {
       warn(err);

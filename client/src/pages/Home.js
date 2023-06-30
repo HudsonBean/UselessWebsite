@@ -4,15 +4,15 @@ import { json } from "react-router-dom";
 
 //Main
 function Home() {
-  function test() {
-    fetch("/api/db", { method: "GET" })
+  function getUsers() {
+    fetch("/api/db/users", { method: "GET" })
       .then((Response) => Response.json())
       .then((data) => console.log(data));
   }
   return (
     <div>
       <h1>Welcome to my website!</h1>
-      <button onClick={test}>Test!</button>
+      <button onClick={getUsers}>Get Users!</button>
     </div>
   );
 }
