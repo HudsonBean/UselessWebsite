@@ -1,17 +1,18 @@
 //Imports
 import React, { useRef, useState } from "react";
 import { json } from "react-router-dom";
+import Navbar from "../modules/Navbar";
+import "../styles/Default.css";
 
 //Global Functions
-function getUsers() {
-  fetch("/api/db/users", { method: "GET" })
-    .then((Response) => Response.json())
-    .then((data) => console.log(data));
-}
 
 //Main
 function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default Home;
