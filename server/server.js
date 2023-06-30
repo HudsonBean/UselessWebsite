@@ -14,9 +14,13 @@ app.use(express.json());
 
 //Gets
 app.get("/api/db", (req, res) => {
-  const a = db.query("select * from users;");
-  console.log(a);
-  res.send(a);
+  db.query("select * from users;", (err, rows, fields) => {
+    if (err) {
+      warn(err);
+    } else {
+      res.status(200).send(JSON.stringify(rows));
+    }
+  });
 });
 
 //Posts
