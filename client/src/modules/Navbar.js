@@ -38,7 +38,10 @@ function Navbar() {
         </div>
 
         <div className="store">
-          <a href="/">Store</a>
+          <a href="/">
+            <span className="link-text">Store</span>
+            <span className="material-symbols-outlined">arrow_drop_down</span>
+          </a>
         </div>
       </div>
       <div className="nav-bar-right"></div>

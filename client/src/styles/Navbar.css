@@ -1,3 +1,25 @@
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 3.5px) rotate(15deg);
+  }
+  100% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+}
+@keyframes shining {
+  0% {
+    background-position: 0% 0;
+  }
+  20% {
+    background-position: -120% 0;
+  }
+  100% {
+    background-position: -120% 0;
+  }
+}
 .nav-bar {
   width: 100%;
   height: 3.5rem;
@@ -25,16 +47,19 @@
   align-items: center;
   position: relative;
 }
-.nav-bar .nav-bar-left div a {
+.nav-bar .nav-bar-left div a,
+.nav-bar .nav-bar-left div .link-text {
   text-decoration: none;
   color: white;
   font-size: 1.15rem;
   font-weight: 1000;
 }
-.nav-bar .nav-bar-left div a:hover:not(.logo a)::before {
+.nav-bar .nav-bar-left div a:hover:not(.logo a):not(.link-text)::before,
+.nav-bar .nav-bar-left div .link-text:hover:not(.logo a):not(.link-text)::before {
   width: 100%;
 }
-.nav-bar .nav-bar-left div a::before {
+.nav-bar .nav-bar-left div a::before,
+.nav-bar .nav-bar-left div .link-text::before {
   content: "";
   width: 0%;
   height: 2.5px;
@@ -43,14 +68,40 @@
   bottom: 0;
   left: 0;
 }
-.nav-bar .nav-bar-left div a img {
-  filter: invert(1);
-}
 .nav-bar .nav-bar-left .store a {
-  color: rgb(255, 157, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar .nav-bar-left .store a .link-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 157, 0);
+  background-image: linear-gradient(-75deg, transparent 0, transparent 5%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.5) 10%, transparent 10%, transparent 100%);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: shining 5s ease 0s infinite;
 }
 .nav-bar .nav-bar-left .store a::before {
   background-color: rgb(255, 157, 0);
+}
+.nav-bar .nav-bar-left .store span {
+  color: rgb(255, 157, 0);
+  transform: translateY(2px);
+}
+.nav-bar .nav-bar-left .logo a {
+  animation: floating 3s ease-in-out 0s infinite;
+}
+.nav-bar .nav-bar-left .logo a img {
+  filter: invert(1);
+  transition: all 0.15s ease;
+}
+.nav-bar .nav-bar-left .logo a:hover img {
+  width: 55px;
+  height: 30px;
+  transform: rotate(40deg);
 }
 .nav-bar .nav-bar-right {
   margin-left: 1.5rem;

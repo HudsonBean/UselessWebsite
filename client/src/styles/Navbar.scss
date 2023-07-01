@@ -4,6 +4,30 @@
 $textPrimary: white;
 $CTA: rgb(255, 157, 0);
 
+//Animations
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 3.5px) rotate(15deg);
+  }
+  100% {
+    transform: translate(0, -0px) rotate(-0deg);
+  }
+}
+@keyframes shining {
+  0% {
+    background-position: -0% 0;
+  }
+  20% {
+    background-position: -120% 0;
+  }
+  100% {
+    background-position: -120% 0;
+  }
+}
+
 .nav-bar {
   width: 100%;
   height: 3.5rem;
@@ -31,12 +55,13 @@ $CTA: rgb(255, 157, 0);
       justify-content: center;
       align-items: center;
       position: relative;
-      a {
+      a,
+      .link-text {
         text-decoration: none;
         color: $textPrimary;
         font-size: 1.15rem;
         font-weight: 1000;
-        &:hover:not(.logo a) {
+        &:hover:not(.logo a):not(.link-text) {
           &::before {
             width: 100%;
           }
@@ -50,24 +75,55 @@ $CTA: rgb(255, 157, 0);
           bottom: 0;
           left: 0;
         }
-        //------
-        img {
-          filter: invert(
-            1
-          ); // DELETE LATER ONLY FOR TESTING UNLESS FUTURE LOGO IS ALSO BLACK
-        }
       }
     }
     .store {
       a {
-        color: $CTA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .link-text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $CTA;
+          background-image: linear-gradient(
+            -75deg,
+            transparent 0,
+            transparent 5%,
+            rgba(255, 255, 255, 0.5) 5%,
+            rgba(255, 255, 255, 0.5) 10%,
+            transparent 10%,
+            transparent 100%
+          );
+          background-size: 200% 100%;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          animation: shining 5s ease 0s infinite;
+        }
         &::before {
           background-color: $CTA;
         }
       }
+      span {
+        color: $CTA;
+        transform: translateY(2px);
+      }
     }
     .logo {
       a {
+        animation: floating 3s ease-in-out 0s infinite;
+        img {
+          filter: invert(1);
+          transition: all 0.15s ease;
+        }
+        &:hover {
+          img {
+            width: 55px;
+            height: 30px;
+            transform: rotate(40deg);
+          }
+        }
       }
     }
   }
