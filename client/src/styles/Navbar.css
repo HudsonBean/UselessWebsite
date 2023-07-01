@@ -101,7 +101,7 @@
 .nav-bar .nav-bar-left .logo a:hover img {
   width: 55px;
   height: 30px;
-  transform: rotate(40deg);
+  transform: rotate(60deg);
 }
 .nav-bar .nav-bar-right {
   margin-left: 1.5rem;
