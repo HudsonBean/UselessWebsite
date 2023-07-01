@@ -12,27 +12,32 @@ function Navbar() {
       <div className="nav-bar-left">
         <div className="logo">
           <a href="/">
-            <img src={placeholder_logo} alt="logo"></img>
+            <img
+              width={"50px"}
+              height={"25px"}
+              src={placeholder_logo}
+              alt={"logo"}
+            ></img>
           </a>
         </div>
 
-        <div className="Explore">
+        <div className="explore">
           <a href="/">Explore</a>
         </div>
 
-        <div className="Auctions">
+        <div className="auctions">
           <a href="/">Auctions</a>
         </div>
 
-        <div className="Inventory">
+        <div className="inventory">
           <a href="/">Inventory</a>
         </div>
 
-        <div className="Discuss">
+        <div className="discuss">
           <a href="/">Discuss</a>
         </div>
 
-        <div className="Store">
+        <div className="store">
           <a href="/">Store</a>
         </div>
       </div>
