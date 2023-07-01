@@ -1,3 +1,9 @@
+//Imports
+
+//Variables
+$textPrimary: white;
+$CTA: rgb(255, 157, 0);
+
 .nav-bar {
   width: 100%;
   height: 3.5rem;
@@ -19,17 +25,31 @@
     align-items: center;
 
     div {
-      $gp: &;
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
       a {
         text-decoration: none;
-        color: white;
+        color: $textPrimary;
         font-size: 1.15rem;
         font-weight: 1000;
+        &:hover:not(.logo a) {
+          &::before {
+            width: 100%;
+          }
+        }
+        &::before {
+          content: "";
+          width: 0%;
+          height: 2.5px;
+          background-color: white;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
         //------
         img {
           filter: invert(
@@ -40,7 +60,14 @@
     }
     .store {
       a {
-        color: rgb(255, 157, 0);
+        color: $CTA;
+        &::before {
+          background-color: $CTA;
+        }
+      }
+    }
+    .logo {
+      a {
       }
     }
   }

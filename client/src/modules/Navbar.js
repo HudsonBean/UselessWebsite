@@ -21,8 +21,8 @@ function Navbar() {
           </a>
         </div>
 
-        <div className="explore">
-          <a href="/">Explore</a>
+        <div className="home">
+          <a href="/">Home</a>
         </div>
 
         <div className="auctions">

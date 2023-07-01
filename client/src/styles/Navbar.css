@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .nav-bar .nav-bar-left div a {
   text-decoration: none;
@@ -30,11 +31,26 @@
   font-size: 1.15rem;
   font-weight: 1000;
 }
+.nav-bar .nav-bar-left div a:hover:not(.logo a)::before {
+  width: 100%;
+}
+.nav-bar .nav-bar-left div a::before {
+  content: "";
+  width: 0%;
+  height: 2.5px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .nav-bar .nav-bar-left div a img {
   filter: invert(1);
 }
 .nav-bar .nav-bar-left .store a {
   color: rgb(255, 157, 0);
+}
+.nav-bar .nav-bar-left .store a::before {
+  background-color: rgb(255, 157, 0);
 }
 .nav-bar .nav-bar-right {
   margin-left: 1.5rem;
