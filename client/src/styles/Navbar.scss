@@ -111,6 +111,14 @@ $CTA: rgb(255, 157, 0);
       }
     }
     .logo {
+      &::before {
+        content: "";
+        width: 1.5px;
+        height: 65%;
+        background-color: white;
+        position: absolute;
+        right: 0.5rem;
+      }
       a {
         animation: floating 3s ease-in-out 0s infinite;
         img {

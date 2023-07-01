@@ -91,6 +91,14 @@
   color: rgb(255, 157, 0);
   transform: translateY(2px);
 }
+.nav-bar .nav-bar-left .logo::before {
+  content: "";
+  width: 1.5px;
+  height: 65%;
+  background-color: white;
+  position: absolute;
+  right: 0.5rem;
+}
 .nav-bar .nav-bar-left .logo a {
   animation: floating 3s ease-in-out 0s infinite;
 }
