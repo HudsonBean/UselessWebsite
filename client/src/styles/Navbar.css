@@ -169,7 +169,7 @@
   background-color: rgba(255, 255, 255, 0.15);
 }
 .nav-bar .nav-bar-right .profile img {
-  border: 2.5px white solid;
+  border: 2px white solid;
   border-radius: 40px;
 }
 @media (max-width: 665px) {
