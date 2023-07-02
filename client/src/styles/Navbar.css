@@ -161,6 +161,7 @@
   font-weight: 1000;
   padding: 0.5rem;
   border-radius: 10px;
+  transition: all 0.15s ease-in-out;
 }
 .nav-bar .nav-bar-right .currency a .dollar-sign {
   margin-right: 0.15rem;
