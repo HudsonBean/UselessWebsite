@@ -25,16 +25,16 @@ function Navbar() {
           <a href="/">Home</a>
         </div>
 
-        <div className="auctions">
-          <a href="/">Auctions</a>
+        <div className="explore">
+          <a href="/">Explore</a>
         </div>
 
-        <div className="inventory">
-          <a href="/">Inventory</a>
+        <div className="trending">
+          <a href="/">Trending</a>
         </div>
 
-        <div className="discuss">
-          <a href="/">Discuss</a>
+        <div className="saved">
+          <a href="/">Saved</a>
         </div>
 
         <div className="store">
