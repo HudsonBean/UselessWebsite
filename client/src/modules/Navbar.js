@@ -39,12 +39,27 @@ function Navbar() {
 
         <div className="store">
           <a href="/">
-            <span className="link-text">Store</span>
-            <span className="material-symbols-outlined">arrow_drop_down</span>
+            Store
+            <span class="material-symbols-outlined">arrow_drop_down</span>
           </a>
         </div>
       </div>
-      <div className="nav-bar-right"></div>
+      <div className="nav-bar-right">
+        <div className="premium">
+          <a href="/">
+            Premium
+            <span class="material-symbols-outlined">verified</span>
+          </a>
+        </div>
+        <div className="currency">
+          <a href="/">$0</a>
+        </div>
+        <div className="profile">
+          <a href="/">
+            <img alt="profile-picture"></img>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

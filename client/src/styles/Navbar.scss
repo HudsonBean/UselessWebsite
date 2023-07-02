@@ -28,6 +28,11 @@ $CTA: rgb(255, 157, 0);
   }
 }
 
+//Google icons
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 .nav-bar {
   width: 100%;
   height: 3.5rem;
@@ -43,7 +48,7 @@ $CTA: rgb(255, 157, 0);
   }
 
   .nav-bar-left {
-    margin-right: 1.5rem;
+    margin-right: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,32 +87,26 @@ $CTA: rgb(255, 157, 0);
         display: flex;
         justify-content: center;
         align-items: center;
-        .link-text {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: $CTA;
-          background-image: linear-gradient(
-            -75deg,
-            transparent 0,
-            transparent 5%,
-            rgba(255, 255, 255, 0.5) 5%,
-            rgba(255, 255, 255, 0.5) 10%,
-            transparent 10%,
-            transparent 100%
-          );
-          background-size: 200% 100%;
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
-          animation: shining 5s ease 0s infinite;
+        background-color: $CTA;
+        background-image: linear-gradient(
+          -75deg,
+          transparent 0,
+          transparent 5%,
+          rgba(255, 255, 255, 0.5) 5%,
+          rgba(255, 255, 255, 0.5) 10%,
+          transparent 10%,
+          transparent 100%
+        );
+        background-size: 200% 100%;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: shining 5s ease 0s infinite;
+        span {
+          margin-top: 0.1rem;
         }
         &::before {
           background-color: $CTA;
         }
-      }
-      span {
-        color: $CTA;
-        transform: translateY(2px);
       }
     }
     .logo {
@@ -137,7 +136,57 @@ $CTA: rgb(255, 157, 0);
   }
 
   .nav-bar-right {
-    margin-left: 1.5rem;
+    margin-left: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 85px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .premium {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px $CTA solid;
+        padding: 0.15rem 0.3rem 0.15rem 0.3rem;
+        background-color: $CTA;
+        background-image: linear-gradient(
+          -75deg,
+          transparent 0,
+          transparent 5%,
+          rgba(255, 255, 255, 0.5) 5%,
+          rgba(255, 255, 255, 0.5) 10%,
+          transparent 10%,
+          transparent 100%
+        );
+        background-size: 200% 100%;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: shining 5s ease 0s infinite;
+        .material-symbols-outlined {
+          margin-left: 0.5rem;
+        }
+        transition: all 0.05s ease-in-out;
+        &:hover {
+          border: 1px white solid;
+          -webkit-background-clip: border-box;
+          -webkit-text-fill-color: $CTA;
+          background-color: white;
+          .material-symbols-outlined {
+            font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+          }
+        }
+      }
+    }
   }
 
   //Alternate nav-bar for smaller screens

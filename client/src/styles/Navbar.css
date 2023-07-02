@@ -20,6 +20,10 @@
     background-position: -120% 0;
   }
 }
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 .nav-bar {
   width: 100%;
   height: 3.5rem;
@@ -34,7 +38,7 @@
   height: 3.5rem;
 }
 .nav-bar .nav-bar-left {
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,11 +76,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.nav-bar .nav-bar-left .store a .link-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(255, 157, 0);
   background-image: linear-gradient(-75deg, transparent 0, transparent 5%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.5) 10%, transparent 10%, transparent 100%);
   background-size: 200% 100%;
@@ -84,12 +83,11 @@
   -webkit-background-clip: text;
   animation: shining 5s ease 0s infinite;
 }
+.nav-bar .nav-bar-left .store a span {
+  margin-top: 0.1rem;
+}
 .nav-bar .nav-bar-left .store a::before {
   background-color: rgb(255, 157, 0);
-}
-.nav-bar .nav-bar-left .store span {
-  color: rgb(255, 157, 0);
-  transform: translateY(2px);
 }
 .nav-bar .nav-bar-left .logo::before {
   content: "";
@@ -112,7 +110,47 @@
   transform: rotate(60deg);
 }
 .nav-bar .nav-bar-right {
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar .nav-bar-right div {
+  width: 85px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar .nav-bar-right div a {
+  text-decoration: none;
+  color: white;
+}
+.nav-bar .nav-bar-right .premium a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px rgb(255, 157, 0) solid;
+  padding: 0.15rem 0.3rem 0.15rem 0.3rem;
+  background-color: rgb(255, 157, 0);
+  background-image: linear-gradient(-75deg, transparent 0, transparent 5%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.5) 10%, transparent 10%, transparent 100%);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: shining 5s ease 0s infinite;
+  transition: all 0.05s ease-in-out;
+}
+.nav-bar .nav-bar-right .premium a .material-symbols-outlined {
+  margin-left: 0.5rem;
+}
+.nav-bar .nav-bar-right .premium a:hover {
+  border: 1px white solid;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: rgb(255, 157, 0);
+  background-color: white;
+}
+.nav-bar .nav-bar-right .premium a:hover .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 @media (max-width: 665px) {
   .nav-bar div {
