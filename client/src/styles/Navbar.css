@@ -137,7 +137,7 @@
   background-size: 200% 100%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: shining 5s ease 0s infinite;
+  animation: shining 5s ease 3s infinite;
   transition: all 0.05s ease-in-out;
 }
 .nav-bar .nav-bar-right .premium a .material-symbols-outlined {
@@ -151,6 +151,17 @@
 }
 .nav-bar .nav-bar-right .premium a:hover .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+.nav-bar .nav-bar-right .currency a {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+.nav-bar .nav-bar-right .currency a .dollar-sign {
+  margin-right: 0.2rem;
+}
+.nav-bar .nav-bar-right .currency a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 @media (max-width: 665px) {
   .nav-bar div {

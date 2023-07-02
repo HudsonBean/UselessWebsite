@@ -52,7 +52,11 @@ function Navbar() {
           </a>
         </div>
         <div className="currency">
-          <a href="/">$0</a>
+          <a href="/">
+            <span className="dollar-sign">$</span>
+            {/*Later add my own money sign*/}
+            <span>0</span> {/*Change to users ammount of currency*/}
+          </a>
         </div>
         <div className="profile">
           <a href="/">
