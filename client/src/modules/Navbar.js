@@ -5,6 +5,7 @@ import "../styles/Navbar.css";
 
 //Asset imports
 import placeholder_logo from "../assets/placeholder_logo.png";
+import placeholder_profile from "../assets/placeholder_profile.png";
 
 function Navbar() {
   return (
@@ -60,7 +61,12 @@ function Navbar() {
         </div>
         <div className="profile">
           <a href="/">
-            <img alt="profile-picture"></img>
+            <img
+              width={"40px"}
+              height={"40px"}
+              src={placeholder_profile}
+              alt="profile-picture"
+            ></img>
           </a>
         </div>
       </div>
