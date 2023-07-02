@@ -1,7 +1,9 @@
+//Imports
 import React from "react";
+import Navbar from "../modules/Navbar";
 
 function Explore() {
-  return <div>Explore</div>;
+  return <div></div>;
 }
 
 export default Explore;
