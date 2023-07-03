@@ -39,17 +39,16 @@ $CTA: rgb(255, 157, 0);
   height: 3.5rem;
   background-color: rgb(50, 50, 50);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  .nav-bar-left,
-  .nav-bar-right {
+  .nav-bar-left {
     width: 32.5rem;
     height: 3.5rem;
   }
 
   .nav-bar-left {
-    margin-right: 2.5rem;
+    margin-left: 8.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +136,7 @@ $CTA: rgb(255, 157, 0);
   }
 
   .nav-bar-right {
-    margin-left: 2.5rem;
+    margin-right: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
