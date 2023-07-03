@@ -117,7 +117,7 @@
   align-items: center;
 }
 .nav-bar .nav-bar-right div {
-  width: 60px;
+  width: 50px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -155,7 +155,8 @@
 }
 .nav-bar .nav-bar-right .currency {
   font-family: "Roboto", sans-serif;
-  margin-left: 1.65rem;
+  margin-left: 2rem;
+  margin-right: 0rem;
 }
 .nav-bar .nav-bar-right .currency a {
   font-size: 1.3rem;

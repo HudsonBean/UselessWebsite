@@ -142,7 +142,7 @@ $CTA: rgb(255, 157, 0);
     justify-content: center;
     align-items: center;
     div {
-      width: 60px;
+      width: 50px;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -190,7 +190,8 @@ $CTA: rgb(255, 157, 0);
     }
     .currency {
       font-family: "Roboto", sans-serif;
-      margin-left: 1.65rem;
+      margin-left: 2rem;
+      margin-right: 0rem;
       a {
         font-size: 1.3rem;
         font-weight: 1000;
