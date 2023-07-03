@@ -224,10 +224,10 @@ $CTA: rgb(255, 157, 0);
           font-size: 1rem;
         }
         span {
-          color: white;
+          color: $CTA;
         }
         a {
-          border: $CTA 1px solid;
+          border: white 1px solid;
           padding: 0.25rem 0rem 0.25rem 0rem;
           border-radius: 5px;
           width: 100px;
@@ -238,9 +238,9 @@ $CTA: rgb(255, 157, 0);
             margin-left: 0.35rem;
           }
           &:hover {
-            background-color: white;
-            border: 1px white solid;
-            color: $CTA;
+            background-color: $CTA;
+            border: 1px $CTA solid;
+            color: white;
           }
         }
       }

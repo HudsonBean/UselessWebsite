@@ -188,10 +188,10 @@
   font-size: 1rem;
 }
 .nav-bar .nav-bar-right .profile .register-signin-container span {
-  color: white;
+  color: rgb(255, 157, 0);
 }
 .nav-bar .nav-bar-right .profile .register-signin-container a {
-  border: rgb(255, 157, 0) 1px solid;
+  border: white 1px solid;
   padding: 0.25rem 0rem 0.25rem 0rem;
   border-radius: 5px;
   width: 100px;
@@ -203,9 +203,9 @@
   margin-left: 0.35rem;
 }
 .nav-bar .nav-bar-right .profile .register-signin-container a:hover {
-  background-color: white;
-  border: 1px white solid;
-  color: rgb(255, 157, 0);
+  background-color: rgb(255, 157, 0);
+  border: 1px rgb(255, 157, 0) solid;
+  color: white;
 }
 @media (max-width: 665px) {
   .nav-bar div {
