@@ -14,15 +14,21 @@ import Subscriptions from "./pages/Subscriptions";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/Explore" element={<Explore />} />
-      <Route path="/Saved" element={<Saved />} />
-      <Route path="/Store">
-        <Route index element={<Store />}></Route>
-        <Route path="Subscriptions" element={<Subscriptions />}></Route>
+      <Route index element={<Home />} />
+      {/*Explore Route*/}
+      <Route path="/Explore">
+        <Route index element={<Explore />} />
+        <Route path="Trending" element={<Explore />} />
       </Route>
+      {/*Store Route*/}
+      <Route path="/Store">
+        <Route index element={<Store />} />
+        <Route path="Subscriptions" element={<Subscriptions />} />
+      </Route>
+      {/*Users Route*/}
       <Route path="/Users">
-        <Route path=":id/Profile" element={<Profile />}></Route>
+        <Route path=":id/Profile" element={<Profile />} />
+        <Route path=":id/Saved" element={<Saved />} />
       </Route>
     </Routes>
   );

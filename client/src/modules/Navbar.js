@@ -30,23 +30,16 @@ function Navbar() {
             ></img>
           </a>
         </div>
-
-        <div className="home">
-          <a href={"/"}>Home</a>
-        </div>
-
+        ∑
         <div className="explore">
           <a href={"/Explore"}>Explore</a>
         </div>
-
         <div className="trending">
-          <a href="/">Trending</a>
+          <a href={"/Explore/Trending"}>Trending</a>
         </div>
-
         <div className="saved">
-          <a href={"/Saved"}>Saved</a>
+          <a href={"Users/1/Saved"}>Saved</a>
         </div>
-
         <div className="store">
           <a href={"/Store"}>
             Store
