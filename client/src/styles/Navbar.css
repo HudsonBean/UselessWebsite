@@ -53,6 +53,7 @@
 }
 .nav-bar .nav-bar-left div a,
 .nav-bar .nav-bar-left div .link-text {
+  transition: all 0.15s ease-in-out;
   text-decoration: none;
   color: white;
   font-size: 1.15rem;
@@ -125,6 +126,7 @@
 .nav-bar .nav-bar-right div a {
   text-decoration: none;
   color: white;
+  transition: all 0.15s ease-in-out;
 }
 .nav-bar .nav-bar-right .premium a {
   display: flex;
