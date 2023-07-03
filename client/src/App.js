@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Saved from "./pages/Saved";
 import Store from "./pages/Store";
-import Profiles from "./pages/Profiles";
+import Profile from "./pages/Profile";
 import Subscriptions from "./pages/Subscriptions";
 
 //Main
@@ -21,8 +21,8 @@ function App() {
         <Route index element={<Store />}></Route>
         <Route path="Subscriptions" element={<Subscriptions />}></Route>
       </Route>
-      <Route path="/Profiles">
-        <Route path=":id/:user_name" element={<Profiles />}></Route>
+      <Route path="/Users">
+        <Route path=":id/Profile" element={<Profile />}></Route>
       </Route>
     </Routes>
   );
