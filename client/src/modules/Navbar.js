@@ -63,18 +63,21 @@ function Navbar(setUser) {
           </a>
         </div>
         <div className="profile">
-          <a href="/users/1/Profile">
-            {user ? (
+          {user ? (
+            <a href="/users/1/Profile">
               <img
                 width={"40px"}
                 height={"40px"}
                 src={placeholder_profile}
                 alt="profile-picture"
               ></img>
-            ) : (
-              <h1>No</h1> // Add login or signup
-            )}
-          </a>
+            </a>
+          ) : (
+            <div className="register-signin-container">
+              <a href="">Register</a>
+              <a href="">Sign In</a>
+            </div>
+          )}
         </div>
       </div>
     </div>

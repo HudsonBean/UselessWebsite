@@ -9,7 +9,6 @@ import "../styles/Home.css";
 function Home() {
   //Variables
   //Functions
-
   //Return
   return (
     <div className="home-body">

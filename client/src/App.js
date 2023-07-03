@@ -10,6 +10,10 @@ import Store from "./pages/Store";
 import Profile from "./pages/Profile";
 import Subscriptions from "./pages/Subscriptions";
 
+//Global Variables
+export let user = NaN;
+export let isLoggedIn = false;
+
 //Main
 function App() {
   return (
