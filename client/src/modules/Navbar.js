@@ -31,7 +31,7 @@ function Navbar(setUser) {
             ></img>
           </a>
         </div>
-        ∑
+
         <div className="explore">
           <a href={"/Explore"}>Explore</a>
         </div>
