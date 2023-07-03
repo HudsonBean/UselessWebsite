@@ -14,6 +14,7 @@ import Subscriptions from "./pages/Subscriptions";
 function App() {
   return (
     <Routes>
+      {/*Home Route*/}
       <Route index element={<Home />} />
       {/*Explore Route*/}
       <Route path="/Explore">
