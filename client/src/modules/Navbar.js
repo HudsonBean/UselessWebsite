@@ -10,7 +10,7 @@ import Home from "../pages/Home.js";
 import Explore from "../pages/Explore.js";
 import Saved from "../pages/Saved.js";
 import Store from "../pages/Store.js";
-import Profile from "../pages/Profile.js";
+import Profile from "../pages/Profiles.js";
 
 //Asset imports
 import placeholder_logo from "../assets/placeholder_logo.png";
@@ -69,7 +69,7 @@ function Navbar() {
           </a>
         </div>
         <div className="profile">
-          <a href="/Profile">
+          <a href="/Profiles">
             <img
               width={"40px"}
               height={"40px"}
