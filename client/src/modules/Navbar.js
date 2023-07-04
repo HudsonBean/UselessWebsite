@@ -74,10 +74,6 @@ function Navbar(setUser) {
             </a>
           ) : (
             <div className="register-signin-container">
-              <a href="" className="register">
-                Register
-              </a>
-              <span>or</span>
               <a href="" className="sign-in">
                 Sign In
               </a>
