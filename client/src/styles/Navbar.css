@@ -36,9 +36,7 @@
 .nav-bar .nav-bar-left {
   width: 32.5rem;
   height: 3.5rem;
-}
-.nav-bar .nav-bar-left {
-  margin-left: 8.5rem;
+  margin-left: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +109,7 @@
   transform: rotate(60deg);
 }
 .nav-bar .nav-bar-right {
-  margin-right: 20rem;
+  margin-right: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;

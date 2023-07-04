@@ -85,6 +85,9 @@ function Navbar(setUser) {
           )}
         </div>
       </div>
+      <div className="popup-container">
+        <div className="popup"></div>
+      </div>
     </div>
   );
 }
