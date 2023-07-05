@@ -13,11 +13,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-form {
-  width: 35rem;
-  height: 45rem;
-  background-color: white;
-  border-radius: 25px;
+  form {
+    width: 25rem;
+    height: 35rem;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    h2 {
+      font-size: 2rem;
+    }
+  }
 }

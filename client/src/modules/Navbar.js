@@ -16,8 +16,13 @@ import Profile from "../pages/Profile.js";
 import placeholder_logo from "../assets/placeholder_logo.png";
 import placeholder_profile from "../assets/placeholder_profile.png";
 
-function Navbar(setUser) {
-  let user = false;
+function Navbar(special) {
+  let user;
+  if (special.content == 2) {
+    user = special;
+  } else {
+    user = 1;
+  }
   return (
     <div className="nav-bar">
       <div className="nav-bar-left">
@@ -63,7 +68,7 @@ function Navbar(setUser) {
           </a>
         </div>
         <div className="profile">
-          {user ? (
+          {user == 0 ? (
             <a href="/users/1/Profile">
               <img
                 width={"40px"}
@@ -72,12 +77,14 @@ function Navbar(setUser) {
                 alt="profile-picture"
               ></img>
             </a>
-          ) : (
+          ) : user == 1 ? (
             <div className="register-signin-container">
               <a href="/Sign-in" className="sign-in">
                 Sign In
               </a>
             </div>
+          ) : (
+            <></>
           )}
         </div>
       </div>
