@@ -1,8 +1,5 @@
 //Imports
-
-//Variables
-$textPrimary: white;
-$CTA: rgb(255, 157, 0);
+@import "./modules/ThemeColors";
 
 //Animations
 @keyframes floating {
@@ -146,7 +143,7 @@ $CTA: rgb(255, 157, 0);
       align-items: center;
       a {
         text-decoration: none;
-        color: white;
+        color: $textPrimary;
         transition: all 0.15s ease-in-out;
       }
     }
@@ -212,7 +209,7 @@ $CTA: rgb(255, 157, 0);
       }
 
       .register-signin-container {
-        margin-left: 4.5rem;
+        margin-left: 4rem;
         width: 200px;
         display: flex;
         justify-content: center;
@@ -233,7 +230,7 @@ $CTA: rgb(255, 157, 0);
           &:hover {
             background-color: $CTA;
             border: 1px $CTA solid;
-            color: white;
+            color: $textPrimary;
           }
         }
       }
