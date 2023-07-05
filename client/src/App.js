@@ -9,6 +9,7 @@ import Saved from "./pages/Saved";
 import Store from "./pages/Store";
 import Profile from "./pages/Profile";
 import Subscriptions from "./pages/Subscriptions";
+import Signin from "./pages/Signin";
 
 //Global Variables
 export let user = NaN;
@@ -35,6 +36,8 @@ function App() {
         <Route path=":id/Profile" element={<Profile />} />
         <Route path=":id/Saved" element={<Saved />} />
       </Route>
+      {/*Sign In Routes*/}
+      <Route path="Sign-in" element={<Signin />} />
     </Routes>
   );
 }

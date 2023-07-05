@@ -74,15 +74,12 @@ function Navbar(setUser) {
             </a>
           ) : (
             <div className="register-signin-container">
-              <a href="" className="sign-in">
+              <a href="/Sign-in" className="sign-in">
                 Sign In
               </a>
             </div>
           )}
         </div>
-      </div>
-      <div className="popup-container">
-        <div className="popup"></div>
       </div>
     </div>
   );

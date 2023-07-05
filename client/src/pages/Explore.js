@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../modules/Navbar";
 
 function Explore() {
-  return <div></div>;
+  return <div>da</div>;
 }
 
 export default Explore;
