@@ -19,7 +19,7 @@
   font-size: 2rem;
   color: rgb(255, 157, 0);
   font-weight: 2000;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 .signin-body .container form {
   display: flex;
@@ -28,9 +28,11 @@
   flex-direction: column;
 }
 .signin-body .container form label {
-  margin-right: 0.25rem;
   font-weight: 1000;
   font-size: 1.5rem;
+}
+.signin-body .container form label:nth-child(3) {
+  margin-top: 3.5rem;
 }
 .signin-body .container form input {
   width: 100%;

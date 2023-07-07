@@ -18,6 +18,16 @@ function Signin() {
               name={"email"}
               type={"email"}
               placeholder={"johndoe@gmail.com"}
+              minLength={"16"}
+              required
+            ></input>
+            <label for={"password"}>Password</label>
+            <input
+              name={"password"}
+              type={"password"}
+              placeholder={"coolPassword6"}
+              pattern=".{8,}"
+              required
             ></input>
           </form>
         </div>
