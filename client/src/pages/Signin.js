@@ -29,7 +29,7 @@ function Signin() {
               pattern=".{8,}"
               required
             />
-            <input type={"submit"} value={"Submit!"} />
+            <input type={"submit"} value={"Sign in!"} />
             <a href={""}>Or create an account?</a>
           </form>
         </div>
