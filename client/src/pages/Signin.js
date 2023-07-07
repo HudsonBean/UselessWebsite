@@ -30,6 +30,7 @@ function Signin() {
               required
             />
             <input type={"submit"} value={"Submit!"} />
+            <a href={""}>Or create an account?</a>
           </form>
         </div>
       </div>

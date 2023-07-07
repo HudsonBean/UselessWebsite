@@ -46,6 +46,7 @@
   text-align: center;
   color: black;
   font-weight: 550;
+  transition: all 0.15s ease;
 }
 .signin-body .container form input::-moz-placeholder {
   color: rgba(0, 0, 0, 0.55);
@@ -58,6 +59,7 @@
 .signin-body .container form input:focus {
   background-color: rgba(0, 0, 0, 0.15);
   font-weight: 500;
+  font-size: 1.1rem;
 }
 .signin-body .container form input:checked {
   background-color: blue;
@@ -81,4 +83,11 @@
   width: 13rem;
   height: 3.5rem;
   font-size: 1.15rem;
+}
+.signin-body .container form a {
+  margin-top: 0.5rem;
+  color: blueviolet;
+}
+.signin-body .container form a:hover {
+  color: rgb(255, 157, 0);
 }/*# sourceMappingURL=Signin.css.map */

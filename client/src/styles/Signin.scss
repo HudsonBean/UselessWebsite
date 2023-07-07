@@ -51,6 +51,7 @@
         text-align: center;
         color: black;
         font-weight: 550;
+        transition: all 0.15s ease;
         &::placeholder {
           color: rgba(0, 0, 0, 0.55);
           font-weight: 10;
@@ -58,6 +59,7 @@
         &:focus {
           background-color: rgba(0, 0, 0, 0.15);
           font-weight: 500;
+          font-size: 1.1rem;
         }
         &:checked {
           background-color: blue;
@@ -81,6 +83,13 @@
             height: 3.5rem;
             font-size: 1.15rem;
           }
+        }
+      }
+      a {
+        margin-top: 0.5rem;
+        color: blueviolet;
+        &:hover {
+          color: $CTA;
         }
       }
     }
