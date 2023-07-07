@@ -1,5 +1,5 @@
 //Imports
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 //Styles
 import "../styles/Signin.css";
 //Components
@@ -9,14 +9,19 @@ function Signin() {
   let [form, setForm] = useState(1);
   function handleForm(event) {
     event.preventDefault();
-    if (form == 1) {
+    let test = [1, 2, 3];
+    if (form === 1) {
       //Sign in form
       //console.log(form); // 1
-      fetch("", {
+      fetch("/api/db/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: "Test",
-      });
+        body: JSON.stringify(test),
+      })
+        .then((Response) => Response.json())
+        .then((data) => {
+          console.log(data);
+        });
     } else {
       //Create account form
       //console.log(form); // 2
@@ -26,7 +31,7 @@ function Signin() {
     <>
       <Navbar content={2} />
       <div className="body">
-        {form == 1 ? (
+        {form === 1 ? (
           <div className="sign-in-container">
             <h1>Sign-in</h1>
             <form onSubmit={handleForm}>

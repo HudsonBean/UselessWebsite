@@ -1,16 +1,10 @@
 //Imports
 import React from "react";
-import { Link } from "react-router-dom";
 
 //Styles
 import "../styles/Navbar.css";
 
 //Pages
-import Home from "../pages/Home.js";
-import Explore from "../pages/Explore.js";
-import Saved from "../pages/Saved.js";
-import Store from "../pages/Store.js";
-import Profile from "../pages/Profile.js";
 
 //Asset imports
 import placeholder_logo from "../assets/placeholder_logo.png";
@@ -18,7 +12,7 @@ import placeholder_profile from "../assets/placeholder_profile.png";
 
 function Navbar(special) {
   let user;
-  if (special.content == 2) {
+  if (special.content === 2) {
     user = special;
   } else {
     user = 1;
@@ -68,16 +62,16 @@ function Navbar(special) {
           </a>
         </div>
         <div className="profile">
-          {user == 0 ? (
+          {user === 0 ? (
             <a href="/users/1/Profile">
               <img
                 width={"40px"}
                 height={"40px"}
                 src={placeholder_profile}
-                alt="profile-picture"
+                alt="profile-pic"
               ></img>
             </a>
-          ) : user == 1 ? (
+          ) : user === 1 ? (
             <div className="register-signin-container">
               <a href="/Sign-in" className="sign-in">
                 Sign In

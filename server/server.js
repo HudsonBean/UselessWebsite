@@ -25,7 +25,8 @@ app.get("/api/db/users", (req, res) => {
 
 //Posts
 app.post("/api/db/users", (req, res) => {
-  res.status(200).send("Hello from server! Is this yours: " + req.body);
+  console.log(req.body);
+  res.status(200).json({ messgae: "Success!" });
 });
 
 //Port start
