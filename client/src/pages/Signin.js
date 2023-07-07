@@ -21,7 +21,7 @@ function Signin() {
     if (form === 1) {
       //Sign in form
       //console.log(form); // 1
-      fetch("/api/db/users", {
+      fetch("/api/db/users/sign-in", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),

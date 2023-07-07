@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt");
 const express = require("express");
 const mysql = require("mysql");
 const db = mysql.createConnection({
@@ -24,8 +25,30 @@ app.get("/api/db/users", (req, res) => {
 });
 
 //Posts
-app.post("/api/db/users", (req, res) => {
-  res.status(200).json({ server: JSON.stringify(req.body) });
+app.post("/api/db/users/sign-in", (req, res) => {
+  //Get user data
+  userData = {};
+  userData["userName"] = req.body[0];
+  userData["userEmail"] = req.body[1];
+  userData["userPassword"] = req.body[2];
+  //has password
+  let encodedUserPassword = bcrypt.hash(userData["userPassword"], 12);
+
+  //Check database if user exists
+  let query =
+    "select * from users where user_email =" +
+    userData["userEmail"] +
+    " and user_password = " +
+    encodedUserPassword +
+    ";";
+  db.query(query, (err, rows, fields) => {
+    if (err) {
+      warn(err);
+    } else {
+      //Log in the user and return
+      res.status(202).json({ server: JSON.stringify(rows) });
+    }
+  });
 });
 
 //Port start
