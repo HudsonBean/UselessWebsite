@@ -1,5 +1,5 @@
 //Imports
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //Styles
 import "../styles/Signin.css";
 //Components
@@ -7,6 +7,21 @@ import Navbar from "../modules/Navbar";
 
 function Signin() {
   let [form, setForm] = useState(1);
+  function handleForm(event) {
+    event.preventDefault();
+    if (form == 1) {
+      //Sign in form
+      //console.log(form); // 1
+      fetch("", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: "Test",
+      });
+    } else {
+      //Create account form
+      //console.log(form); // 2
+    }
+  }
   return (
     <>
       <Navbar content={2} />
@@ -14,7 +29,7 @@ function Signin() {
         {form == 1 ? (
           <div className="sign-in-container">
             <h1>Sign-in</h1>
-            <form>
+            <form onSubmit={handleForm}>
               <label for={"email"}>Email:</label>
               <input
                 name={"email"}
@@ -38,7 +53,7 @@ function Signin() {
         ) : (
           <div className="create-account-container">
             <h1>Create Account</h1>
-            <form>
+            <form onSubmit={handleForm}>
               <label for={"username"}>Username:</label>
               <input
                 name={"username"}

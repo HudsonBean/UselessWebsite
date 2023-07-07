@@ -24,6 +24,9 @@ app.get("/api/db/users", (req, res) => {
 });
 
 //Posts
+app.post("/api/db/users", (req, res) => {
+  res.status(200).send("Hello from server! Is this yours: " + req.body);
+});
 
 //Port start
 app.listen(8000, (err) => {
