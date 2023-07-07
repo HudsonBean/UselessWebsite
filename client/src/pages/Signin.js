@@ -10,9 +10,17 @@ function Signin() {
     <>
       <Navbar content={2} />
       <div className="signin-body">
-        <form>
-          <h2>Sign-in</h2>
-        </form>
+        <div className="container">
+          <h1>Sign-in</h1>
+          <form>
+            <label for={"email"}>Email</label>
+            <input
+              name={"email"}
+              type={"email"}
+              placeholder={"johndoe@gmail.com"}
+            ></input>
+          </form>
+        </div>
       </div>
     </>
   );
