@@ -20,7 +20,7 @@ function Signin() {
               placeholder={"johndoe@gmail.com"}
               minLength={"16"}
               required
-            ></input>
+            />
             <label for={"password"}>Password</label>
             <input
               name={"password"}
@@ -28,7 +28,8 @@ function Signin() {
               placeholder={"coolPassword6"}
               pattern=".{8,}"
               required
-            ></input>
+            />
+            <input type={"submit"} value={"Submit!"} />
           </form>
         </div>
       </div>
