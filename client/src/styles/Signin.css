@@ -21,7 +21,8 @@
   font-weight: 2000;
 }
 .signin-body .container form {
-  border: rgb(255, 157, 0) 2px solid;
+  border: black 0.5px solid;
+  background-color: rgba(0, 0, 0, 0.05);
   width: 20rem;
   height: 27rem;
   border-radius: 15px;
