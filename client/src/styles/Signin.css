@@ -58,8 +58,7 @@
 }
 .signin-body .container form input:focus {
   background-color: rgba(0, 0, 0, 0.15);
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.875rem;
 }
 .signin-body .container form input:checked {
   background-color: blue;
@@ -80,8 +79,8 @@
   border: 2.5px rgb(255, 157, 0) solid;
   background-color: white;
   color: rgb(255, 157, 0);
-  width: 13rem;
-  height: 3.5rem;
+  width: 12.75rem;
+  height: 3.25rem;
   font-size: 1.15rem;
 }
 .signin-body .container form a {

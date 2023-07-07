@@ -58,8 +58,7 @@
         }
         &:focus {
           background-color: rgba(0, 0, 0, 0.15);
-          font-weight: 500;
-          font-size: 1.1rem;
+          font-size: 0.875rem;
         }
         &:checked {
           background-color: blue;
@@ -79,8 +78,8 @@
             border: 2.5px $CTA solid;
             background-color: white;
             color: $CTA;
-            width: 13rem;
-            height: 3.5rem;
+            width: 12.75rem;
+            height: 3.25rem;
             font-size: 1.15rem;
           }
         }
