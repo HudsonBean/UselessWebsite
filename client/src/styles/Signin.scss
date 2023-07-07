@@ -125,11 +125,11 @@
       align-items: center;
       flex-direction: column;
       label {
-        $margin: 0.5rem;
-        margin: $margin 0rem $margin 0rem;
+        margin: 2rem 0rem 0.1rem 0rem;
         font-weight: 1000;
         font-size: 1.5rem;
-        &:nth-child(3) {
+        &:nth-child(1) {
+          margin: 0rem 0rem 0.1rem 0rem;
         }
       }
       input {

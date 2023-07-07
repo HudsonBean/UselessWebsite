@@ -123,9 +123,12 @@
   flex-direction: column;
 }
 .body .create-account-container form label {
-  margin: 0.5rem 0rem 0.5rem 0rem;
+  margin: 2rem 0rem 0.1rem 0rem;
   font-weight: 1000;
   font-size: 1.5rem;
+}
+.body .create-account-container form label:nth-child(1) {
+  margin: 0rem 0rem 0.1rem 0rem;
 }
 .body .create-account-container form input {
   width: 10rem;
