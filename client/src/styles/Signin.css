@@ -22,7 +22,7 @@
 }
 .signin-body .container form {
   border: black 0.5px solid;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.025);
   width: 20rem;
   height: 27rem;
   border-radius: 15px;
