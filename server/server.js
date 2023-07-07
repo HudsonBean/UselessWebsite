@@ -25,7 +25,7 @@ app.get("/api/db/users", (req, res) => {
 
 //Posts
 app.post("/api/db/users", (req, res) => {
-  res.status(200).json({ messgae: JSON.stringify(req.body) });
+  res.status(200).json({ server: JSON.stringify(req.body) });
 });
 
 //Port start

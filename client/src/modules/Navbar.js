@@ -43,7 +43,7 @@ function Navbar(special) {
         <div className="store">
           <a href={"/Store"}>
             Store
-            <span class="material-symbols-outlined">arrow_drop_down</span>
+            <span className="material-symbols-outlined">arrow_drop_down</span>
           </a>
         </div>
       </div>
@@ -51,7 +51,7 @@ function Navbar(special) {
         <div className="premium">
           <a href="/Store/Subscriptions">
             Premium
-            <span class="material-symbols-outlined">verified</span>
+            <span className="material-symbols-outlined">verified</span>
           </a>
         </div>
         <div className="currency">

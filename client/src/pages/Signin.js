@@ -43,7 +43,7 @@ function Signin() {
           <div className="sign-in-container">
             <h1>Sign-in</h1>
             <form onSubmit={handleForm}>
-              <label for={"email"}>Email:</label>
+              <label htmlFor={"email"}>Email:</label>
               <input
                 ref={emailRef}
                 name={"email"}
@@ -52,7 +52,7 @@ function Signin() {
                 minLength={"16"}
                 required
               />
-              <label for={"password"}>Password:</label>
+              <label htmlFor={"password"}>Password:</label>
               <input
                 ref={passwordRef}
                 name={"password"}
@@ -76,7 +76,7 @@ function Signin() {
           <div className="create-account-container">
             <h1>Create Account</h1>
             <form onSubmit={handleForm}>
-              <label for={"username"}>Username:</label>
+              <label htmlFor={"username"}>Username:</label>
               <input
                 name={"username"}
                 type={"text"}
@@ -85,14 +85,14 @@ function Signin() {
                 maxLength={"20"}
                 required
               />
-              <label for={"email"}>Email:</label>
+              <label htmlFor={"email"}>Email:</label>
               <input
                 name={"email"}
                 type={"email"}
                 placeholder={"johndoe@gmail.com"}
                 required
               />
-              <label for={"password"}>Password:</label>
+              <label htmlFor={"password"}>Password:</label>
               <input
                 name={"password"}
                 type={"password"}
