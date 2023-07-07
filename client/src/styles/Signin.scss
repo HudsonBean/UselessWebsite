@@ -37,6 +37,7 @@
       align-items: center;
       flex-direction: column;
       label {
+        margin-bottom: 1.25rem;
         font-weight: 1000;
         font-size: 1.5rem;
         &:nth-child(3) {
@@ -44,7 +45,8 @@
         }
       }
       input {
-        height: 1.5rem;
+        width: 10rem;
+        height: 2rem;
         border: 0px;
         background-color: rgba(0, 0, 0, 0.15);
         border-radius: 5px;
@@ -56,9 +58,12 @@
           color: rgba(0, 0, 0, 0.55);
           font-weight: 10;
         }
-        &:focus {
+        &:focus,
+        &:hover {
           background-color: rgba(0, 0, 0, 0.15);
           font-size: 0.875rem;
+          width: 10.15rem;
+          height: 2.15rem;
         }
         &:checked {
           background-color: blue;
