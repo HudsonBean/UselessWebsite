@@ -6,14 +6,14 @@
 
 //Main
 
-.signin-body {
+.body {
   width: 100%;
   height: 93.2vh;
   background-image: linear-gradient(rgb(40, 40, 40), rgb(30, 30, 30));
   display: flex;
   justify-content: center;
   align-items: center;
-  .container {
+  .sign-in-container {
     width: 25rem;
     height: 35rem;
     background-color: white;
@@ -89,7 +89,98 @@
           }
         }
       }
-      a {
+      span {
+        text-decoration: underline;
+        pointer-events: all;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        color: blueviolet;
+        &:hover {
+          color: $CTA;
+        }
+      }
+    }
+  }
+  .create-account-container {
+    width: 25rem;
+    height: 35rem;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      font-size: 2rem;
+      color: black;
+      font-weight: 2000;
+    }
+    form {
+      border: black 0.5px solid;
+      background-color: rgba(0, 0, 0, 0.025);
+      width: 20rem;
+      height: 27rem;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      label {
+        $margin: 0.5rem;
+        margin: $margin 0rem $margin 0rem;
+        font-weight: 1000;
+        font-size: 1.5rem;
+        &:nth-child(3) {
+        }
+      }
+      input {
+        width: 10rem;
+        height: 2rem;
+        border: 0px;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        text-align: center;
+        color: black;
+        font-weight: 550;
+        transition: all 0.15s ease;
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.55);
+          font-weight: 10;
+        }
+        &:focus,
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.15);
+          font-size: 0.875rem;
+          width: 10.15rem;
+          height: 2.15rem;
+        }
+        &:checked {
+          background-color: blue;
+        }
+        &[type="submit"] {
+          margin-top: 3rem;
+          width: 12.5rem;
+          height: 3rem;
+          background-color: $CTA;
+          border: 1px white solid;
+          color: white;
+          font-size: 1rem;
+          pointer-events: all;
+          cursor: pointer;
+          transition: all 0.15s ease;
+          &:hover {
+            border: 2.5px $CTA solid;
+            background-color: white;
+            color: $CTA;
+            width: 12.75rem;
+            height: 3.25rem;
+            font-size: 1.15rem;
+          }
+        }
+      }
+      span {
+        text-decoration: underline;
+        pointer-events: all;
+        cursor: pointer;
         margin-top: 0.5rem;
         color: blueviolet;
         &:hover {

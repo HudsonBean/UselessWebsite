@@ -1,4 +1,4 @@
-.signin-body {
+.body {
   width: 100%;
   height: 93.2vh;
   background-image: linear-gradient(rgb(40, 40, 40), rgb(30, 30, 30));
@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 }
-.signin-body .container {
+.body .sign-in-container {
   width: 25rem;
   height: 35rem;
   background-color: white;
@@ -15,12 +15,12 @@
   align-items: center;
   flex-direction: column;
 }
-.signin-body .container h1 {
+.body .sign-in-container h1 {
   font-size: 2rem;
   color: black;
   font-weight: 2000;
 }
-.signin-body .container form {
+.body .sign-in-container form {
   border: black 0.5px solid;
   background-color: rgba(0, 0, 0, 0.025);
   width: 20rem;
@@ -31,15 +31,15 @@
   align-items: center;
   flex-direction: column;
 }
-.signin-body .container form label {
+.body .sign-in-container form label {
   margin-bottom: 1.25rem;
   font-weight: 1000;
   font-size: 1.5rem;
 }
-.signin-body .container form label:nth-child(3) {
+.body .sign-in-container form label:nth-child(3) {
   margin-top: 3.5rem;
 }
-.signin-body .container form input {
+.body .sign-in-container form input {
   width: 10rem;
   height: 2rem;
   border: 0px;
@@ -50,24 +50,24 @@
   font-weight: 550;
   transition: all 0.15s ease;
 }
-.signin-body .container form input::-moz-placeholder {
+.body .sign-in-container form input::-moz-placeholder {
   color: rgba(0, 0, 0, 0.55);
   font-weight: 10;
 }
-.signin-body .container form input::placeholder {
+.body .sign-in-container form input::placeholder {
   color: rgba(0, 0, 0, 0.55);
   font-weight: 10;
 }
-.signin-body .container form input:focus, .signin-body .container form input:hover {
+.body .sign-in-container form input:focus, .body .sign-in-container form input:hover {
   background-color: rgba(0, 0, 0, 0.15);
   font-size: 0.875rem;
   width: 10.15rem;
   height: 2.15rem;
 }
-.signin-body .container form input:checked {
+.body .sign-in-container form input:checked {
   background-color: blue;
 }
-.signin-body .container form input[type=submit] {
+.body .sign-in-container form input[type=submit] {
   margin-top: 3.5rem;
   width: 12.5rem;
   height: 3rem;
@@ -79,7 +79,7 @@
   cursor: pointer;
   transition: all 0.15s ease;
 }
-.signin-body .container form input[type=submit]:hover {
+.body .sign-in-container form input[type=submit]:hover {
   border: 2.5px rgb(255, 157, 0) solid;
   background-color: white;
   color: rgb(255, 157, 0);
@@ -87,10 +87,101 @@
   height: 3.25rem;
   font-size: 1.15rem;
 }
-.signin-body .container form a {
+.body .sign-in-container form span {
+  text-decoration: underline;
+  pointer-events: all;
+  cursor: pointer;
   margin-top: 0.5rem;
   color: blueviolet;
 }
-.signin-body .container form a:hover {
+.body .sign-in-container form span:hover {
+  color: rgb(255, 157, 0);
+}
+.body .create-account-container {
+  width: 25rem;
+  height: 35rem;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.body .create-account-container h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: 2000;
+}
+.body .create-account-container form {
+  border: black 0.5px solid;
+  background-color: rgba(0, 0, 0, 0.025);
+  width: 20rem;
+  height: 27rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body .create-account-container form label {
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  font-weight: 1000;
+  font-size: 1.5rem;
+}
+.body .create-account-container form input {
+  width: 10rem;
+  height: 2rem;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  font-weight: 550;
+  transition: all 0.15s ease;
+}
+.body .create-account-container form input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 10;
+}
+.body .create-account-container form input::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 10;
+}
+.body .create-account-container form input:focus, .body .create-account-container form input:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  font-size: 0.875rem;
+  width: 10.15rem;
+  height: 2.15rem;
+}
+.body .create-account-container form input:checked {
+  background-color: blue;
+}
+.body .create-account-container form input[type=submit] {
+  margin-top: 3rem;
+  width: 12.5rem;
+  height: 3rem;
+  background-color: rgb(255, 157, 0);
+  border: 1px white solid;
+  color: white;
+  font-size: 1rem;
+  pointer-events: all;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.body .create-account-container form input[type=submit]:hover {
+  border: 2.5px rgb(255, 157, 0) solid;
+  background-color: white;
+  color: rgb(255, 157, 0);
+  width: 12.75rem;
+  height: 3.25rem;
+  font-size: 1.15rem;
+}
+.body .create-account-container form span {
+  text-decoration: underline;
+  pointer-events: all;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  color: blueviolet;
+}
+.body .create-account-container form span:hover {
   color: rgb(255, 157, 0);
 }/*# sourceMappingURL=Signin.css.map */

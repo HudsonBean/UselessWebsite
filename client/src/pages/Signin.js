@@ -1,38 +1,73 @@
 //Imports
-import React from "react";
+import React, { useState } from "react";
 //Styles
 import "../styles/Signin.css";
 //Components
 import Navbar from "../modules/Navbar";
 
 function Signin() {
+  let [form, setForm] = useState(1);
   return (
     <>
       <Navbar content={2} />
-      <div className="signin-body">
-        <div className="container">
-          <h1>Sign-in</h1>
-          <form>
-            <label for={"email"}>Email:</label>
-            <input
-              name={"email"}
-              type={"email"}
-              placeholder={"johndoe@gmail.com"}
-              minLength={"16"}
-              required
-            />
-            <label for={"password"}>Password:</label>
-            <input
-              name={"password"}
-              type={"password"}
-              placeholder={"coolPassword6"}
-              pattern=".{8,}"
-              required
-            />
-            <input type={"submit"} value={"Sign in!"} />
-            <a href={""}>Or create an account?</a>
-          </form>
-        </div>
+      <div className="body">
+        {form == 1 ? (
+          <div className="sign-in-container">
+            <h1>Sign-in</h1>
+            <form>
+              <label for={"email"}>Email:</label>
+              <input
+                name={"email"}
+                type={"email"}
+                placeholder={"johndoe@gmail.com"}
+                minLength={"16"}
+                required
+              />
+              <label for={"password"}>Password:</label>
+              <input
+                name={"password"}
+                type={"password"}
+                placeholder={"coolPassword6"}
+                pattern=".{8,}"
+                required
+              />
+              <input type={"submit"} value={"Sign in!"} />
+              <span onClick={() => setForm(2)}>Or create an account?</span>
+            </form>
+          </div>
+        ) : (
+          <div className="create-account-container">
+            <h1>Create Account</h1>
+            <form>
+              <label for={"username"}>Username:</label>
+              <input
+                name={"username"}
+                type={"text"}
+                placeholder={"JohnDoe"}
+                minLength={3}
+                maxLength={"20"}
+                required
+              />
+              <label for={"email"}>Email:</label>
+              <input
+                name={"email"}
+                type={"email"}
+                placeholder={"johndoe@gmail.com"}
+                required
+              />
+              <label for={"password"}>Password:</label>
+              <input
+                name={"password"}
+                type={"password"}
+                placeholder={"coolPassword6"}
+                pattern=".{8,}"
+                required
+              />
+              <input type={"submit"} value={"Create Account!"} />
+              <span onClick={() => setForm(1)}>Or sign in?</span>
+            </form>
+          </div>
+        )}
       </div>
     </>
   );
