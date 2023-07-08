@@ -55,9 +55,13 @@ app.post("/api/db/users/sign-in", async (req, res) => {
           if (result) {
             //Correct password
             //console.log("Winner!");
+            res.status(202).send("Success!");
           } else {
             //Wrong password
             //console.log("Wrong password :(");
+            res
+              .status(404)
+              .send("Your email or password is incorrect. Please try again.");
           }
         }
       );
