@@ -12,6 +12,15 @@ const app = express();
 app.use(express.json());
 
 //Variables
+class userClass {
+  constructor(userName, userEmail, userPassword, userId, userInventory) {
+    this.userName = userName;
+    this.userEmail = userEmail;
+    this.#userPassword = userPassword;
+    this.userId = userId;
+    this.userInventory = NaN;
+  }
+}
 
 //Gets
 app.get("/api/db/users", (req, res) => {
@@ -43,7 +52,6 @@ app.post("/api/db/users/sign-in", async (req, res) => {
       throw err;
     }
     if (rows && rows.length) {
-      let row = rows[0];
       //Found the row with the email, meaning the email has an account
       //Now verify the user inputted password for the email
       bcrypt.compare(
@@ -56,7 +64,8 @@ app.post("/api/db/users/sign-in", async (req, res) => {
           if (result) {
             //Correct password
             //console.log("Winner!");
-            res.status(202).json(JSON.stringify("Success!")).send("Success!");
+            const user = new userClass();
+            res.status(202).json(JSON.stringify(rows[0])).send("Success!");
           } else {
             //Wrong password
             //console.log("Wrong password :(");
