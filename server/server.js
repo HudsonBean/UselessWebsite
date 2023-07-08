@@ -25,12 +25,13 @@ app.get("/api/db/users", (req, res) => {
 
 //Posts
 app.post("/api/db/users/sign-in", async (req, res) => {
-  //Set user data in to variables
+  function failed() {}
+  //Set client inputted user data in to variables
   clientUserName = req.body[0];
   clientUserEmail = req.body[1];
   clientUserPassword = req.body[2];
 
-  //Check database if user exists
+  //Check database if the user exists
   let query = // Asking to get all the rows where the user_email equals the inputted client email
     "select * from users where user_email =" +
     "'" +
@@ -44,7 +45,7 @@ app.post("/api/db/users/sign-in", async (req, res) => {
     if (rows && rows.length) {
       let row = rows[0];
       //Found the row with the email, meaning the email has an account
-      //Verify password
+      //Now verify the user inputted password for the email
       bcrypt.compare(
         clientUserPassword,
         rows[0].user_password,
@@ -59,23 +60,14 @@ app.post("/api/db/users/sign-in", async (req, res) => {
           } else {
             //Wrong password
             //console.log("Wrong password :(");
-            res
-              .status(404)
-              .json(
-                JSON.stringify(
-                  "Your email or password is incorrect. Please try again."
-                )
-              )
-              .send("Your email or password is incorrect. Please try again.");
+            failed();
           }
         }
       );
     } else {
       //Couldn't find the row with the email
+      failed();
     }
-    //Log in the user and return
-    //res.status(202).json({ server: JSON.stringify(rows) });
-    //rows : all data from the supplied email adress
   });
 });
 
