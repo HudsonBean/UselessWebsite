@@ -17,44 +17,63 @@ app.use(express.json());
 app.get("/api/db/users", (req, res) => {
   db.query("select * from users;", (err, rows, fields) => {
     if (err) {
-      warn(err);
-    } else {
-      res.status(200).send(JSON.stringify(rows));
+      throw err;
     }
+    res.status(200).send(JSON.stringify(rows));
   });
 });
 
 //Posts
-app.post("/api/db/users/sign-in", (req, res) => {
-  //Get user data
-  userData = {};
-  userData["userName"] = req.body[0];
-  userData["userEmail"] = req.body[1];
-  userData["userPassword"] = req.body[2];
-  //has password
-  let encodedUserPassword = bcrypt.hash(userData["userPassword"], 12);
+app.post("/api/db/users/sign-in", async (req, res) => {
+  //Set user data in to variables
+  clientUserName = req.body[0];
+  clientUserEmail = req.body[1];
+  clientUserPassword = req.body[2];
 
   //Check database if user exists
-  let query =
+  let query = // Asking to get all the rows where the user_email equals the inputted client email
     "select * from users where user_email =" +
-    userData["userEmail"] +
-    " and user_password = " +
-    encodedUserPassword +
+    "'" +
+    clientUserEmail +
+    "'" +
     ";";
   db.query(query, (err, rows, fields) => {
     if (err) {
-      warn(err);
-    } else {
-      //Log in the user and return
-      res.status(202).json({ server: JSON.stringify(rows) });
+      throw err;
     }
+    if (rows && rows.length) {
+      let row = rows[0];
+      //Found the row with the email, meaning the email has an account
+      //Verify password
+      bcrypt.compare(
+        clientUserPassword,
+        rows[0].user_password,
+        (err, result) => {
+          if (err) {
+            throw err;
+          }
+          if (result) {
+            //Correct password
+            //console.log("Winner!");
+          } else {
+            //Wrong password
+            //console.log("Wrong password :(");
+          }
+        }
+      );
+    } else {
+      //Couldn't find the row with the email
+    }
+    //Log in the user and return
+    //res.status(202).json({ server: JSON.stringify(rows) });
+    //rows : all data from the supplied email adress
   });
 });
 
-//Port start
+//Port starts
 app.listen(8000, (err) => {
   if (err) {
-    console.log(err);
+    throw err;
   }
   console.log("Server is now active on port 8000");
 });
