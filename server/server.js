@@ -16,7 +16,7 @@ class userClass {
   constructor(userName, userEmail, userPassword, userId, userInventory) {
     this.userName = userName;
     this.userEmail = userEmail;
-    this.#userPassword = userPassword;
+    this.userPassword = userPassword;
     this.userId = userId;
     this.userInventory = NaN;
   }
@@ -64,8 +64,16 @@ app.post("/api/db/users/sign-in", async (req, res) => {
           if (result) {
             //Correct password
             //console.log("Winner!");
-            const user = new userClass();
-            res.status(202).json(JSON.stringify(rows[0])).send("Success!");
+            let serverUser = rows[0];
+            const user = new userClass(
+              serverUser.user_name,
+              serverUser.user_email,
+              serverUser.user_password,
+              serverUser.user_id,
+              NaN
+            );
+            setUser(user);
+            res.status(202).json(JSON.stringify(user)).send("Success!");
           } else {
             //Wrong password
             //console.log("Wrong password :(");

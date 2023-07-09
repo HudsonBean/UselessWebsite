@@ -12,8 +12,16 @@ import Subscriptions from "./pages/Subscriptions";
 import Signin from "./pages/Signin";
 
 //Global Variables
-export let user = NaN;
+let user = NaN;
 export let isLoggedIn = false;
+
+//Global functions
+function setUser(a) {
+  user = a;
+}
+
+//Exports
+export { user, setUser };
 
 //Main
 function App() {
